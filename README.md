@@ -7,9 +7,11 @@ Display all root related info of an Android Device.
 2. Modify the code to suit your needs.
 3. Watch out for more features.
 
+
 &nbsp;
 ### Stats Displayed :
 Device Rooted, Root Available, Root Path, Root given, Busy Box installation.
+
 
 &nbsp;
 ### Screenshot : 
@@ -17,7 +19,6 @@ Device Rooted, Root Available, Root Path, Root given, Busy Box installation.
 
 
 &nbsp;
-
 ### Year developed : 
 2018
 
