@@ -26,7 +26,7 @@ Device Rooted, Root Available, Root Path, Root given, Busy Box installation.
 &nbsp;
 
 ### SDK Info : 
-Min SDK : 16  | Target SDK : 27 | Gradle : 3.0.1 | Kotlin
+Min SDK : 16  | Target SDK : 27 | Gradle : 3.1.3 | Kotlin
 
 &nbsp;
 
