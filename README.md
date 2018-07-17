@@ -10,7 +10,11 @@ Display all root related info of an Android Device.
 
 &nbsp;
 ### Stats Displayed :
-Device Rooted, Root Available, Root Path, Root given, Busy Box installation.
+- Device Rooted
+- Root Available
+- Root Path
+- Root given
+- Busy Box installation.
 
 
 &nbsp;
