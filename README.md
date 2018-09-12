@@ -1,3 +1,6 @@
+![asset 1hdpi 1](https://user-images.githubusercontent.com/40878798/45441898-46b60c00-b6e2-11e8-8eef-06009020a9da.png)
+
+
 # Root-Checker
 Display all root related info of an Android Device. 
 
