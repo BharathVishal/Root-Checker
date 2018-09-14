@@ -44,5 +44,4 @@ Android Studio 3.0.1
 
 &nbsp;
 
-© 2018. Developed by Bharath Vishal G (https://github.com/BharathVishal).
-Thank you. :smile: Logo designed by somratking420(https://github.com/somratking420).
+© 2018. Developed by Bharath Vishal G (https://github.com/BharathVishal). Logo designed by somratking420(https://github.com/somratking420). Thank you. :smile:
