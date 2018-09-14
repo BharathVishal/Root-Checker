@@ -1,4 +1,4 @@
-![asset 1hdpi 1](https://user-images.githubusercontent.com/40878798/45441898-46b60c00-b6e2-11e8-8eef-06009020a9da.png)
+![asset 1hdpi 1](https://github.com/BharathVishal/Root-Checker/blob/master/Asset%201ldpi.png)
 
 
 # Root-Checker
