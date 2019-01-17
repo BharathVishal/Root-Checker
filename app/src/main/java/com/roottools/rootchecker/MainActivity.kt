@@ -1,21 +1,15 @@
 package com.roottools.rootchecker
 
 import android.graphics.Color
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.roottools.rootchecker.ConstantsUtilities.Constants
 import com.roottools.rootchecker.ConstantsUtilities.RootUtilities
+import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var rootAvailable: TextView
-    private lateinit var rootGiven: TextView
-    private lateinit var rootPath: TextView
-    private lateinit var deviceRooted: TextView
-    private lateinit var headerDescText: TextView
-    private lateinit var busyBoxInstalledText: TextView
     private var rooted: Boolean = false
     private var rootGivenBool: Boolean = false
     private var busyBoxInstalledBool: Boolean = false
@@ -24,19 +18,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        rootPath = findViewById(R.id.Root_Path_text)
-        rootGiven = findViewById(R.id.Root_Given_Text)
-        rootAvailable = findViewById(R.id.Device_Root_Available)
-        deviceRooted = findViewById(R.id.Device_Rooted)
-        headerDescText = findViewById(R.id.Root_Text_Desc)
-        busyBoxInstalledText = findViewById(R.id.busy_Box_Installed)
-
+        //Run the async task
         getRootData()
     }
 
 
-    fun getRootData() {
+    private fun getRootData() {
         doAsync {
             rooted = RootUtilities.isRootAvailable()
             rootGivenBool = RootUtilities.isRootGiven()
@@ -44,41 +31,39 @@ class MainActivity : AppCompatActivity() {
 
             uiThread {
                 if (rooted) {
-                    headerDescText.text = Constants.DEVICE_ROOTED
-                    headerDescText.setTextColor(Color.parseColor("#00E676"))
+                    Root_Text_Desc.text = Constants.DEVICE_ROOTED
+                    Root_Text_Desc.setTextColor(Color.parseColor("#00E676"))
 
-                    deviceRooted.text = Constants.YES
-                    rootPath.text = RootUtilities.findBinaryLocation()
+                    Device_Rooted.text = Constants.YES
+                    Root_Path_text.text = RootUtilities.findBinaryLocation()
 
                     if (rootGivenBool)
-                        rootGiven.text = Constants.TRUE
+                        Root_Given_Text.text = Constants.TRUE
                     else
-                        rootGiven.text = Constants.FALSE
+                        Root_Given_Text.text = Constants.FALSE
 
 
                     if (rooted) {
-                        rootGiven.text = Constants.TRUE
-                        rootAvailable.text = Constants.YES
+                        Root_Given_Text.text = Constants.TRUE
+                        Device_Root_Available.text = Constants.YES
                     } else {
-                        rootAvailable.text = Constants.NO
-
-                        rootGiven.text = Constants.FALSE
+                        Device_Root_Available.text = Constants.NO
+                        Root_Given_Text.text = Constants.FALSE
                     }
 
                     if (busyBoxInstalledBool)
-                        busyBoxInstalledText.text = Constants.YES
+                        busy_Box_Installed.text = Constants.YES
                     else
-                        busyBoxInstalledText.text = Constants.NO
+                        busy_Box_Installed.text = Constants.NO
 
                 } else {
-                    rootAvailable.text = Constants.NO
-                    rootGiven.text = Constants.NO
-                    rootPath.text = Constants.SYMBOL_HYPHEN
-                    deviceRooted.text = Constants.NO
-                    busyBoxInstalledText.text = Constants.NO
+                    Device_Root_Available.text = Constants.NO
+                    Root_Given_Text.text = Constants.NO
+                    Root_Path_text.text = Constants.SYMBOL_HYPHEN
+                    Device_Rooted.text = Constants.NO
+                    busy_Box_Installed.text = Constants.NO
                 }
             }
         }
     }
-
 }

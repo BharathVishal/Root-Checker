@@ -45,7 +45,7 @@ object RootUtilities {
 
 
     fun isRootAvailable(): Boolean {
-        for (pathDir in System.getenv("PATH").split(":".toRegex()).dropLastWhile({ it.isEmpty() }).toTypedArray()) {
+        for (pathDir in System.getenv("PATH")?.split(":".toRegex())?.dropLastWhile { it.isEmpty() }?.toTypedArray()!!) {
             if (File(pathDir, "su").exists()) {
                 return true
             }
