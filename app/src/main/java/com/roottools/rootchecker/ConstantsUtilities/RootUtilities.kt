@@ -55,12 +55,11 @@ object RootUtilities {
 
 
     fun isBusyBoxInstalled(): Boolean {
-        return checkForBinaryBusyBox("busybox")
+        return checkBinaryBusyBox("busybox")
     }
 
 
-    private fun checkForBinaryBusyBox(filename: String): Boolean {
-
+    private fun checkBinaryBusyBox(filename: String): Boolean {
         val pathsArray = arrayOf("/data/local/", "/data/local/bin/", "/data/local/xbin/", "/sbin/", "/su/bin/", "/system/bin/", "/system/bin/.ext/", "/system/bin/failsafe/", "/system/sd/xbin/", "/system/usr/we-need-root/", "/system/xbin/")
         var result = false
         for (path in pathsArray) {
@@ -80,15 +79,14 @@ object RootUtilities {
             var process: Process? = null
             try {
                 process = Runtime.getRuntime().exec(arrayOf("su", "-c", "id"))
-                val `in` = BufferedReader(InputStreamReader(process!!.inputStream))
-                val output = `in`.readLine()
+                val input = BufferedReader(InputStreamReader(process!!.inputStream))
+                val output = input.readLine()
                 if (output != null && output.toLowerCase().contains("uid=0"))
                     return true
             } catch (e: Exception) {
                 e.printStackTrace()
             } finally {
-                if (process != null)
-                    process.destroy()
+                process?.destroy()
             }
         }
         return false
