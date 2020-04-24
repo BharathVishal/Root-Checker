@@ -6,10 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.roottools.rootchecker.ConstantsUtilities.Constants
 import com.roottools.rootchecker.ConstantsUtilities.RootUtilities
 import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.anko.doAsync
-import org.jetbrains.anko.uiThread
+import kotlinx.coroutines.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), CoroutineScope by MainScope() {
     private var rooted: Boolean = false
     private var rootGivenBool: Boolean = false
     private var busyBoxInstalledBool: Boolean = false
@@ -23,46 +22,52 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun getRootData() {
-        doAsync {
-            rooted = RootUtilities.isRootAvailable()
-            rootGivenBool = RootUtilities.isRootGiven()
-            busyBoxInstalledBool = RootUtilities.isBusyBoxInstalled()
+    fun getRootData() {
+        //Coroutine
+        launch(Dispatchers.Default) {
+            try {
+                rooted = RootUtilities.isRootAvailable()
+                rootGivenBool = RootUtilities.isRootGiven()
+                busyBoxInstalledBool = RootUtilities.isBusyBoxInstalled()
 
-            uiThread {
-                if (rooted) {
-                    Root_Text_Desc.text = Constants.DEVICE_ROOTED
-                    Root_Text_Desc.setTextColor(Color.parseColor("#00E676"))
-
-                    Device_Rooted.text = Constants.YES
-                    Root_Path_text.text = RootUtilities.findBinaryLocation()
-
-                    if (rootGivenBool)
-                        Root_Given_Text.text = Constants.TRUE
-                    else
-                        Root_Given_Text.text = Constants.FALSE
-
-
+                //UI Thread
+                withContext(Dispatchers.Main) {
                     if (rooted) {
-                        Root_Given_Text.text = Constants.TRUE
-                        Device_Root_Available.text = Constants.YES
+                        Root_Text_Desc.text = Constants.DEVICE_ROOTED
+                        Root_Text_Desc.setTextColor(Color.parseColor("#00E676"))
+
+                        Device_Rooted.text = Constants.YES
+                        Root_Path_text.text = RootUtilities.findBinaryLocation()
+
+                        if (rootGivenBool)
+                            Root_Given_Text.text = Constants.TRUE
+                        else
+                            Root_Given_Text.text = Constants.FALSE
+
+
+                        if (rooted) {
+                            Root_Given_Text.text = Constants.TRUE
+                            Device_Root_Available.text = Constants.YES
+                        } else {
+                            Device_Root_Available.text = Constants.NO
+                            Root_Given_Text.text = Constants.FALSE
+                        }
+
+                        if (busyBoxInstalledBool)
+                            busy_Box_Installed.text = Constants.YES
+                        else
+                            busy_Box_Installed.text = Constants.NO
+
                     } else {
                         Device_Root_Available.text = Constants.NO
-                        Root_Given_Text.text = Constants.FALSE
-                    }
-
-                    if (busyBoxInstalledBool)
-                        busy_Box_Installed.text = Constants.YES
-                    else
+                        Root_Given_Text.text = Constants.NO
+                        Root_Path_text.text = Constants.SYMBOL_HYPHEN
+                        Device_Rooted.text = Constants.NO
                         busy_Box_Installed.text = Constants.NO
-
-                } else {
-                    Device_Root_Available.text = Constants.NO
-                    Root_Given_Text.text = Constants.NO
-                    Root_Path_text.text = Constants.SYMBOL_HYPHEN
-                    Device_Rooted.text = Constants.NO
-                    busy_Box_Installed.text = Constants.NO
+                    }
                 }
+            } catch (e: java.lang.Exception) {
+                e.printStackTrace()
             }
         }
     }
