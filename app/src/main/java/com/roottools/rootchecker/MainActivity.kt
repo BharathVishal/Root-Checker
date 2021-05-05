@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.roottools.rootchecker.ConstantsUtilities.Constants
 import com.roottools.rootchecker.ConstantsUtilities.RootUtilities
-import kotlinx.android.synthetic.main.activity_main.*
+import com.roottools.rootchecker.databinding.ActivityMainBinding
 import kotlinx.coroutines.*
 
 class MainActivity : AppCompatActivity(), CoroutineScope by MainScope() {
@@ -13,10 +13,14 @@ class MainActivity : AppCompatActivity(), CoroutineScope by MainScope() {
     private var rootGivenBool: Boolean = false
     private var busyBoxInstalledBool: Boolean = false
 
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+
         //Run the async task
         getRootData()
     }
@@ -33,37 +37,37 @@ class MainActivity : AppCompatActivity(), CoroutineScope by MainScope() {
                 //UI Thread
                 withContext(Dispatchers.Main) {
                     if (rooted) {
-                        Root_Text_Desc.text = Constants.DEVICE_ROOTED
-                        Root_Text_Desc.setTextColor(Color.parseColor("#00E676"))
+                        binding.RootTextDesc.text = Constants.DEVICE_ROOTED
+                        binding.RootTextDesc.setTextColor(Color.parseColor("#00E676"))
 
-                        Device_Rooted.text = Constants.YES
-                        Root_Path_text.text = RootUtilities.findBinaryLocation()
+                        binding.DeviceRooted.text = Constants.YES
+                        binding.RootPathText.text = RootUtilities.findBinaryLocation()
 
                         if (rootGivenBool)
-                            Root_Given_Text.text = Constants.TRUE
+                            binding.RootGivenText.text = Constants.TRUE
                         else
-                            Root_Given_Text.text = Constants.FALSE
+                            binding.RootGivenText.text = Constants.FALSE
 
 
                         if (rooted) {
-                            Root_Given_Text.text = Constants.TRUE
-                            Device_Root_Available.text = Constants.YES
+                            binding.RootGivenText.text = Constants.TRUE
+                            binding.DeviceRootAvailable.text = Constants.YES
                         } else {
-                            Device_Root_Available.text = Constants.NO
-                            Root_Given_Text.text = Constants.FALSE
+                            binding.DeviceRootAvailable.text = Constants.NO
+                            binding.RootGivenText.text = Constants.FALSE
                         }
 
                         if (busyBoxInstalledBool)
-                            busy_Box_Installed.text = Constants.YES
+                            binding.busyBoxInstalled.text = Constants.YES
                         else
-                            busy_Box_Installed.text = Constants.NO
+                            binding.busyBoxInstalled.text = Constants.NO
 
                     } else {
-                        Device_Root_Available.text = Constants.NO
-                        Root_Given_Text.text = Constants.NO
-                        Root_Path_text.text = Constants.SYMBOL_HYPHEN
-                        Device_Rooted.text = Constants.NO
-                        busy_Box_Installed.text = Constants.NO
+                        binding.DeviceRootAvailable.text = Constants.NO
+                        binding.RootGivenText.text = Constants.NO
+                        binding.RootPathText.text = Constants.SYMBOL_HYPHEN
+                        binding.DeviceRooted.text = Constants.NO
+                        binding.busyBoxInstalled.text = Constants.NO
                     }
                 }
             } catch (e: java.lang.Exception) {
