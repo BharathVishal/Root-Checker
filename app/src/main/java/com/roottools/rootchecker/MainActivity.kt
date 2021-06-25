@@ -30,8 +30,8 @@ class MainActivity : AppCompatActivity(), CoroutineScope by MainScope() {
         //Coroutine
         launch(Dispatchers.Default) {
             try {
-                rooted = RootUtilities.isRootAvailable()
-                rootGivenBool = RootUtilities.isRootGiven()
+                rooted = RootUtilities.isRootAvailableOnDevice()
+                rootGivenBool = RootUtilities.isRootGivenForDevice()
                 busyBoxInstalledBool = RootUtilities.isBusyBoxInstalled()
 
                 //UI Thread
@@ -41,38 +41,45 @@ class MainActivity : AppCompatActivity(), CoroutineScope by MainScope() {
                         binding.RootTextDesc.setTextColor(Color.parseColor("#00E676"))
 
                         binding.DeviceRooted.text = Constants.YES
-                        binding.RootPathText.text = RootUtilities.findBinaryLocation()
+                        binding.RootPathTextTV.text = RootUtilities.findBinaryLocationPath()
 
                         if (rootGivenBool)
-                            binding.RootGivenText.text = Constants.TRUE
+                            binding.RootGivenDeviceText.text = Constants.TRUE
                         else
-                            binding.RootGivenText.text = Constants.FALSE
+                            binding.RootGivenDeviceText.text = Constants.FALSE
 
 
                         if (rooted) {
-                            binding.RootGivenText.text = Constants.TRUE
-                            binding.DeviceRootAvailable.text = Constants.YES
+                            binding.RootGivenDeviceText.text = Constants.TRUE
+                            binding.DeviceRootAvailableOnDevice.text = Constants.YES
                         } else {
-                            binding.DeviceRootAvailable.text = Constants.NO
-                            binding.RootGivenText.text = Constants.FALSE
+                            binding.DeviceRootAvailableOnDevice.text = Constants.NO
+                            binding.RootGivenDeviceText.text = Constants.FALSE
                         }
 
                         if (busyBoxInstalledBool)
-                            binding.busyBoxInstalled.text = Constants.YES
+                            binding.busyBoxInstalledOnDevice.text = Constants.YES
                         else
-                            binding.busyBoxInstalled.text = Constants.NO
+                            binding.busyBoxInstalledOnDevice.text = Constants.NO
 
                     } else {
-                        binding.DeviceRootAvailable.text = Constants.NO
-                        binding.RootGivenText.text = Constants.NO
-                        binding.RootPathText.text = Constants.SYMBOL_HYPHEN
+                        binding.DeviceRootAvailableOnDevice.text = Constants.NO
+                        binding.RootGivenDeviceText.text = Constants.NO
+                        binding.RootPathTextTV.text = Constants.SYMBOL_HYPHEN
                         binding.DeviceRooted.text = Constants.NO
-                        binding.busyBoxInstalled.text = Constants.NO
+                        binding.busyBoxInstalledOnDevice.text = Constants.NO
                     }
                 }
             } catch (e: java.lang.Exception) {
                 e.printStackTrace()
             }
         }
+    }
+
+
+    override fun onDestroy() {
+        super.onDestroy()
+        //Cancels the coroutine scope including its job
+        cancel()
     }
 }

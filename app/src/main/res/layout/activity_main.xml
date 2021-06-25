@@ -71,6 +71,20 @@
 
                 </LinearLayout>
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center_horizontal"
+                    android:maxLines="2"
+                    android:text="This app checks if your device is rooted or not"
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/Root_Text_Desc"
@@ -101,6 +115,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
+                    android:orientation="vertical"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp">
 
@@ -116,6 +131,7 @@
                         android:gravity="center_horizontal"
                         android:maxLines="1"
                         android:text="Device Rooted  "
+                        android:textSize="15sp"
                         android:textColor="#3F51B5" />
 
 
@@ -149,6 +165,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:layout_marginTop="10dp">
 
 
@@ -162,12 +179,13 @@
                         android:fontFamily="sans-serif-condensed"
                         android:gravity="center_horizontal"
                         android:maxLines="1"
+                        android:textSize="15sp"
                         android:text="Root Available   "
                         android:textColor="#3F51B5" />
 
 
                     <TextView
-                        android:id="@+id/Device_Root_Available"
+                        android:id="@+id/Device_Root_AvailableOnDevice"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
@@ -195,6 +213,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:layout_marginTop="10dp">
 
 
@@ -209,11 +228,12 @@
                         android:gravity="center_horizontal"
                         android:maxLines="2"
                         android:text="Root Path   "
+                        android:textSize="15sp"
                         android:textColor="#3F51B5" />
 
 
                     <TextView
-                        android:id="@+id/Root_Path_text"
+                        android:id="@+id/Root_Path_textTV"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end|center_vertical"
@@ -241,6 +261,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:layout_marginTop="10dp">
 
 
@@ -255,11 +276,12 @@
                         android:gravity="center_horizontal"
                         android:maxLines="1"
                         android:text="Root Given   "
+                        android:textSize="15sp"
                         android:textColor="#3F51B5" />
 
 
                     <TextView
-                        android:id="@+id/Root_Given_Text"
+                        android:id="@+id/Root_Given_DeviceText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
@@ -288,6 +310,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
+                    android:orientation="vertical"
                     android:layout_marginTop="10dp">
 
 
@@ -300,13 +323,14 @@
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed"
                         android:gravity="center_horizontal"
+                        android:textSize="15sp"
                         android:maxLines="2"
                         android:text="Busy Box Installed"
                         android:textColor="#3F51B5" />
 
 
                     <TextView
-                        android:id="@+id/busy_Box_Installed"
+                        android:id="@+id/busy_Box_InstalledOnDevice"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end|center_vertical"

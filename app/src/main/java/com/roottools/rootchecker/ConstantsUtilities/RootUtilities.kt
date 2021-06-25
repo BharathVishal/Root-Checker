@@ -3,6 +3,7 @@ package com.roottools.rootchecker.ConstantsUtilities
 import java.io.BufferedReader
 import java.io.File
 import java.io.InputStreamReader
+import java.util.*
 
 
 object RootUtilities {
@@ -27,7 +28,7 @@ object RootUtilities {
     }
 
 
-    fun findBinaryLocation(): String {
+    fun findBinaryLocationPath(): String {
         var path = Constants.SYMBOL_HYPHEN
         var found = false
         if (!found) {
@@ -44,7 +45,7 @@ object RootUtilities {
     }
 
 
-    fun isRootAvailable(): Boolean {
+    fun isRootAvailableOnDevice(): Boolean {
         for (pathDir in System.getenv("PATH")?.split(":".toRegex())?.dropLastWhile { it.isEmpty() }?.toTypedArray()!!) {
             if (File(pathDir, "su").exists()) {
                 return true
@@ -55,11 +56,11 @@ object RootUtilities {
 
 
     fun isBusyBoxInstalled(): Boolean {
-        return checkBinaryBusyBox("busybox")
+        return checkBinaryBusyBoxInstalled("busybox")
     }
 
 
-    private fun checkBinaryBusyBox(filename: String): Boolean {
+    private fun checkBinaryBusyBoxInstalled(filename: String): Boolean {
         val pathsArray = arrayOf("/data/local/", "/data/local/bin/", "/data/local/xbin/", "/sbin/", "/su/bin/", "/system/bin/", "/system/bin/.ext/", "/system/bin/failsafe/", "/system/sd/xbin/", "/system/usr/we-need-root/", "/system/xbin/")
         var result = false
         for (path in pathsArray) {
@@ -74,14 +75,14 @@ object RootUtilities {
     }
 
 
-    fun isRootGiven(): Boolean {
-        if (isRootAvailable()) {
+    fun isRootGivenForDevice(): Boolean {
+        if (isRootAvailableOnDevice()) {
             var process: Process? = null
             try {
                 process = Runtime.getRuntime().exec(arrayOf("su", "-c", "id"))
                 val input = BufferedReader(InputStreamReader(process!!.inputStream))
                 val output = input.readLine()
-                if (output != null && output.toLowerCase().contains("uid=0"))
+                if (output != null && output.lowercase(Locale.getDefault()).contains("uid=0"))
                     return true
             } catch (e: Exception) {
                 e.printStackTrace()
