@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package com.roottools.rootchecker.ConstantsUtilities
 
 import java.io.BufferedReader

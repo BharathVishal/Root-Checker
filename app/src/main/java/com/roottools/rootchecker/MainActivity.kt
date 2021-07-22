@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity(), CoroutineScope by MainScope() {
     }
 
 
-    fun getRootData() {
+    private fun getRootData() {
         //Coroutine
         launch(Dispatchers.Default) {
             try {
