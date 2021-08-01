@@ -33,13 +33,13 @@ Display all root related info of an Android Device.
 &nbsp;
 
 ### SDK Info : 
-Min SDK : 21  | Target SDK : 30 | Gradle : 6.7.1 | Kotlin
+Min SDK : 21  | Target SDK : 31 | Gradle : 7.0.2 | Kotlin
 
 &nbsp;
 
 
 ### Android Studio Version : 
-Android Studio 4.2.2
+Min SDK : 16 | Target SDK : 30 | Gradle : 7.0.2 | Kotlin
 
 
 &nbsp;
