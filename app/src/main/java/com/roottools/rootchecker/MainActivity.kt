@@ -1,8 +1,10 @@
 package com.roottools.rootchecker
 
+import android.app.Application
 import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.color.DynamicColors
 import com.roottools.rootchecker.ConstantsUtilities.Constants
 import com.roottools.rootchecker.ConstantsUtilities.RootUtilities
 import com.roottools.rootchecker.databinding.ActivityMainBinding
@@ -16,7 +18,17 @@ class MainActivity : AppCompatActivity(), CoroutineScope by MainScope() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.AppThemeCustom)
+
+        try {
+            if (RootUtilities.isOSSandAbove)
+                DynamicColors.applyIfAvailable(this)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
         super.onCreate(savedInstanceState)
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)

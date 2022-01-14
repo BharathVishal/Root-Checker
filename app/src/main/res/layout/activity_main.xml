@@ -3,28 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAFAFA"
     android:clipToPadding="false"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/app_name" />
+    </com.google.android.material.appbar.AppBarLayout>
 
 
     <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:orientation="vertical"
-        card_view:cardBackgroundColor="#FFFFFF"
-        card_view:cardCornerRadius="2dp"
-        card_view:cardElevation="2dp"
-        card_view:cardMaxElevation="5dp">
-
+        card_view:cardCornerRadius="12dp"
+        card_view:cardElevation="1dp"
+        card_view:cardMaxElevation="1dp">
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true">
+            android:layout_alignParentBottom="true">
 
 
             <LinearLayout
@@ -66,7 +74,6 @@
                         android:maxLines="1"
                         android:text="Root Checker"
                         android:textAllCaps="true"
-                        android:textColor="#3F51B5"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -75,10 +82,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginBottom="5dp"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
                     android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="center_horizontal"
@@ -91,10 +98,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
                     android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="center_horizontal"
@@ -108,16 +115,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="0.5sp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
                     android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
                     android:background="@android:color/darker_gray" />
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:orientation="vertical"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
 
 
                     <TextView
@@ -131,8 +138,8 @@
                         android:gravity="center_horizontal"
                         android:maxLines="1"
                         android:text="Device Rooted  "
-                        android:textSize="15sp"
-                        android:textColor="#3F51B5" />
+                        android:textColor="?attr/colorTertiary"
+                        android:textSize="15sp" />
 
 
                     <TextView
@@ -146,8 +153,7 @@
                         android:fontFamily="sans-serif-condensed"
                         android:gravity="center_horizontal"
                         android:maxLines="1"
-                        android:text=""
-                        android:textColor="#000" />
+                        android:text="" />
 
 
                 </LinearLayout>
@@ -157,16 +163,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="0.5sp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
                     android:background="@android:color/darker_gray" />
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
 
 
                     <TextView
@@ -179,9 +185,9 @@
                         android:fontFamily="sans-serif-condensed"
                         android:gravity="center_horizontal"
                         android:maxLines="1"
-                        android:textSize="15sp"
                         android:text="Root Available   "
-                        android:textColor="#3F51B5" />
+                        android:textColor="?attr/colorTertiary"
+                        android:textSize="15sp" />
 
 
                     <TextView
@@ -196,7 +202,7 @@
                         android:gravity="center_horizontal"
                         android:maxLines="1"
                         android:text=""
-                        android:textColor="#000" />
+                        android:textColor="?attr/colorTertiary" />
 
                 </LinearLayout>
 
@@ -205,16 +211,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="0.5sp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
                     android:background="@android:color/darker_gray" />
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
 
 
                     <TextView
@@ -228,8 +234,8 @@
                         android:gravity="center_horizontal"
                         android:maxLines="2"
                         android:text="Root Path   "
-                        android:textSize="15sp"
-                        android:textColor="#3F51B5" />
+                        android:textColor="?attr/colorTertiary"
+                        android:textSize="15sp" />
 
 
                     <TextView
@@ -243,8 +249,7 @@
                         android:fontFamily="sans-serif-condensed"
                         android:gravity="center_horizontal"
                         android:maxLines="2"
-                        android:text=""
-                        android:textColor="#000" />
+                        android:text="" />
 
                 </LinearLayout>
 
@@ -253,16 +258,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="0.5sp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
                     android:background="@android:color/darker_gray" />
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
 
 
                     <TextView
@@ -276,8 +281,8 @@
                         android:gravity="center_horizontal"
                         android:maxLines="1"
                         android:text="Root Given   "
-                        android:textSize="15sp"
-                        android:textColor="#3F51B5" />
+                        android:textColor="?attr/colorTertiary"
+                        android:textSize="15sp" />
 
 
                     <TextView
@@ -291,8 +296,7 @@
                         android:fontFamily="sans-serif-condensed"
                         android:gravity="center_horizontal"
                         android:maxLines="1"
-                        android:text=""
-                        android:textColor="#000" />
+                        android:text="" />
 
                 </LinearLayout>
 
@@ -301,17 +305,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0.5sp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
                     android:background="@android:color/darker_gray" />
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="15dp"
-                    android:orientation="vertical"
-                    android:layout_marginTop="10dp">
+                    android:orientation="vertical">
 
 
                     <TextView
@@ -323,10 +327,10 @@
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed"
                         android:gravity="center_horizontal"
-                        android:textSize="15sp"
                         android:maxLines="2"
                         android:text="Busy Box Installed"
-                        android:textColor="#3F51B5" />
+                        android:textColor="?attr/colorTertiary"
+                        android:textSize="15sp" />
 
 
                     <TextView
@@ -340,8 +344,7 @@
                         android:fontFamily="sans-serif-condensed"
                         android:gravity="center_horizontal"
                         android:maxLines="2"
-                        android:text=""
-                        android:textColor="#000" />
+                        android:text="" />
 
                 </LinearLayout>
 

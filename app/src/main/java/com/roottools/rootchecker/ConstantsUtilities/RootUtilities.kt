@@ -2,6 +2,7 @@
 
 package com.roottools.rootchecker.ConstantsUtilities
 
+import android.os.Build
 import java.io.BufferedReader
 import java.io.File
 import java.io.InputStreamReader
@@ -94,5 +95,20 @@ object RootUtilities {
         }
         return false
     }
+
+
+    val isOSSandAbove: Boolean
+        get() {
+            val sdkInt = Build.VERSION.SDK_INT
+            var releaseInt = 0
+            try {
+                val releaseStr = Build.VERSION.RELEASE
+                releaseInt = releaseStr.toInt()
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+            return sdkInt >= 31
+        }
+
 
 }
