@@ -33,16 +33,16 @@ Display all root related info of an Android Device.
 &nbsp;
 
 ### SDK Info : 
-Min SDK : 21  | Target SDK : 31 | Gradle : 7.0.3 | Kotlin
+Min SDK : 23  | Target SDK : 32 | Gradle : 7.0.4 | Kotlin
 
 &nbsp;
 
 
 ### Android Studio Version : 
-Android Studio Arctic Fox | 2020.3.1 Patch 3
+Android Studio Arctic Fox | 2020.3.1 Patch 4
 
 
 
 &nbsp;
 
-© 2018-2021. Developed by Bharath Vishal G (https://github.com/BharathVishal). Logo designed by somratking420(https://github.com/somratking420). Thank you. :smile:
+© 2018-2022. Developed by Bharath Vishal G (https://github.com/BharathVishal). Logo designed by somratking420(https://github.com/somratking420). Thank you. :smile:
