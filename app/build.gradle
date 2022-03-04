@@ -7,8 +7,8 @@ android {
         applicationId "com.roottools.rootchecker"
         minSdkVersion 23
         targetSdkVersion 32
-        versionCode 54
-        versionName "2.8"
+        versionCode 59
+        versionName "2.9"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
