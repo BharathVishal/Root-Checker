@@ -15,19 +15,20 @@
         <activity
             android:name=".SplashActivity"
             android:exported="true"
-            android:theme="@style/ThemeAppStarting"
             android:resizeableActivity="true"
+            android:theme="@style/ThemeAppStarting"
             tools:targetApi="n">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:resizeableActivity="true"
             tools:targetApi="n" />
     </application>
+
 </manifest>

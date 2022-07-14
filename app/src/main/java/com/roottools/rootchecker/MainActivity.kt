@@ -1,6 +1,5 @@
 package com.roottools.rootchecker
 
-import android.app.Application
 import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -22,7 +21,7 @@ class MainActivity : AppCompatActivity(), CoroutineScope by MainScope() {
 
         try {
             if (RootUtilities.isOSSandAbove)
-                DynamicColors.applyIfAvailable(this)
+                DynamicColors.applyToActivityIfAvailable(this)
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -36,6 +35,7 @@ class MainActivity : AppCompatActivity(), CoroutineScope by MainScope() {
         //Run the async task
         getRootData()
     }
+
 
 
     private fun getRootData() {
