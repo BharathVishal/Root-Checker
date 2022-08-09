@@ -9,8 +9,8 @@ android {
         applicationId "com.roottools.rootchecker"
         minSdkVersion 23
         targetSdkVersion 33
-        versionCode 69
-        versionName "3.4"
+        versionCode 75
+        versionName "3.5"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary true
@@ -49,12 +49,12 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     implementation 'androidx.cardview:cardview:1.0.0'
     androidTestImplementation 'androidx.test:runner:1.4.0'
-    implementation 'com.google.android.material:material:1.7.0-alpha02'
+    implementation 'com.google.android.material:material:1.7.0-alpha03'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    implementation 'androidx.core:core-splashscreen:1.0.0-rc01'
+    implementation 'androidx.core:core-splashscreen:1.0.0'
     implementation 'androidx.core:core-ktx:1.8.0'
-    implementation 'androidx.compose.material3:material3:1.0.0-alpha14'
+    implementation 'androidx.compose.material3:material3:1.0.0-alpha15'
 }
 repositories {
     mavenCentral()
