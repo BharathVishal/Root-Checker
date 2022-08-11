@@ -4,10 +4,8 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.google.android.material.color.DynamicColors
 import com.roottools.rootchecker.ConstantsUtilities.RootUtilities
 
 public class SplashActivity : AppCompatActivity() {
