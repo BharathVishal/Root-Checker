@@ -1,4 +1,4 @@
-package com.roottools.rootchecker
+package com.roottools.rootchecker.application
 
 import android.app.Application
 import android.util.Log

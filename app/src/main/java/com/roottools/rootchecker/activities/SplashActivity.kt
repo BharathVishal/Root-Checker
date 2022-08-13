@@ -1,4 +1,4 @@
-package com.roottools.rootchecker
+package com.roottools.rootchecker.activities
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -21,8 +21,20 @@ public class SplashActivity : AppCompatActivity() {
 
         actvityContext = this@SplashActivity
 
-        val intent = Intent(actvityContext, MainActivity::class.java)
-        startActivity(intent)
-        finish()
+
+        //For testing purpose
+        //1 - Default Main Activity with xml
+        //2 - Main activity with Jetpack Compose
+        val activityTypeToLaunch = 2
+
+        if (activityTypeToLaunch == 1) {
+            val intent = Intent(actvityContext, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        } else {
+            val intent = Intent(actvityContext, MainActivityCompose::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }

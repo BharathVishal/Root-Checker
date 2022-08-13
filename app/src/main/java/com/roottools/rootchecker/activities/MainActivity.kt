@@ -1,4 +1,4 @@
-package com.roottools.rootchecker
+package com.roottools.rootchecker.activities
 
 import android.graphics.Color
 import android.os.Bundle
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.color.DynamicColors
 import com.roottools.rootchecker.ConstantsUtilities.Constants
 import com.roottools.rootchecker.ConstantsUtilities.RootUtilities
+import com.roottools.rootchecker.R
 import com.roottools.rootchecker.databinding.ActivityMainBinding
 import kotlinx.coroutines.*
 
