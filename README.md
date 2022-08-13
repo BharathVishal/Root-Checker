@@ -2,7 +2,7 @@
 
 
 # Root-Checker
-Display all root related info of an Android Device. 
+Display all root related info of an Android Device. Fully implemented in Jetpack compose using Material 3 dynamic theming and also has a separate implementation with xml.
 
 
 ### Usage:
@@ -23,7 +23,7 @@ Display all root related info of an Android Device.
 &nbsp;
 ### Screenshot : 
 ![Screenshot 1](https://github.com/BharathVishal/Root-Checker/blob/master/Screenshots/1.png?s=90)
-
+![Screenshot 1](https://github.com/BharathVishal/Root-Checker/blob/master/Screenshots/2.png?s=90)
 
 &nbsp;
 ### Year developed : 
@@ -33,7 +33,7 @@ Display all root related info of an Android Device.
 &nbsp;
 
 ### SDK Info : 
-Min SDK : 23  | Target SDK : 33 | Gradle : 7.2.2 | Kotlin
+Min SDK : 23  | Target SDK : 33 | Gradle : 7.2.2 | Kotlin | Jetpack Compose
 
 &nbsp;
 
