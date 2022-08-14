@@ -22,7 +22,7 @@ import com.google.android.material.color.DynamicColors
 import com.roottools.rootchecker.ConstantsUtilities.Constants
 import com.roottools.rootchecker.ConstantsUtilities.RootUtilities
 import com.roottools.rootchecker.R
-import com.roottools.rootchecker.ui.theme.Material3AppTheme
+import com.roottools.rootchecker.theme.Material3AppTheme
 import kotlinx.coroutines.*
 
 class MainActivityCompose : ComponentActivity(), CoroutineScope by MainScope() {

@@ -1,4 +1,5 @@
-package com.roottools.rootchecker.ui.theme
+package com.roottools.rootchecker.theme
+
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

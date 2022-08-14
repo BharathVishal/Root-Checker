@@ -1,4 +1,4 @@
-package com.roottools.rootchecker.ui.theme
+package com.roottools.rootchecker.theme
 
 import androidx.compose.ui.graphics.Color
 
