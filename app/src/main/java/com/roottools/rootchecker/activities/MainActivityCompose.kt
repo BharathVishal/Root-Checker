@@ -133,7 +133,7 @@ class MainActivityCompose : ComponentActivity(), CoroutineScope by MainScope() {
     @OptIn(ExperimentalMaterial3Api::class)
     @Composable
     fun TopAppBarMain() {
-        SmallTopAppBar(
+        TopAppBar(
             title = { Text("Root Checker  - Compose Activity") },
             colors = TopAppBarDefaults.smallTopAppBarColors(
                 titleContentColor = MaterialTheme.colorScheme.onSurfaceVariant,
