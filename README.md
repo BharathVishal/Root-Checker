@@ -33,7 +33,7 @@ Display all root related info of an Android Device. Fully implemented in Jetpack
 &nbsp;
 
 ### SDK Info : 
-Min SDK : 23  | Target SDK : 33 | Gradle : 7.3.0 | Kotlin | Jetpack Compose
+Min SDK : 23  | Target SDK : 33 | Gradle : 7.3.1 | Kotlin | Jetpack Compose
 
 &nbsp;
 
