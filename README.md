@@ -39,7 +39,7 @@ Min SDK : 23  | Target SDK : 33 | Gradle : 7.3.1 | Kotlin | Jetpack Compose
 
 
 ### Android Studio Version : 
-Android Studio Dolphin | 2021.3.1 Patch 1
+Android Studio Electric Eel | 2021.3.1 Patch 1
 
 
 
