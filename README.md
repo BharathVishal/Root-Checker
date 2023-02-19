@@ -45,4 +45,10 @@ Android Studio Electric Eel | 2022.1.1
 
 &nbsp;
 
+#### License : 
+[Apache License 2.0](https://github.com/BharathVishal/Root-Checker/blob/master/LICENSE)
+&nbsp;
+
+&nbsp;
+
 © 2018-2023. Developed by Bharath Vishal G (https://github.com/BharathVishal). Logo designed by somratking420(https://github.com/somratking420). Thank you. :smile:
