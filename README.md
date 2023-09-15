@@ -47,7 +47,7 @@ Android Studio Giraffe | 2022.3.1 Patch 1
 #### License : 
 [Apache License 2.0](https://github.com/BharathVishal/Root-Checker/blob/master/LICENSE)
 &nbsp;
-
+&nbsp;
 ####
 Android is a trademark of Google LLC. 
 
