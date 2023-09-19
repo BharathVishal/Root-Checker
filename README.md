@@ -10,8 +10,9 @@ Display all root related info of an Android Device. Fully implemented in Jetpack
 2. Modify the code to suit your needs.
 3. Watch out for more features.
 
+
 ### Note:
-This application doesn't root any Android device. This app just displays all the root related info of an Android Device.
+This application doesn't root any Android device. This app only displays all the root related info of an Android Device.
 
 
 &nbsp;
