@@ -21,7 +21,6 @@ package com.roottools.rootchecker.activities
 import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.bharathvishal.textfileviewer.MainComponent.TextReaderModule
 import com.google.android.material.color.DynamicColors
 import com.roottools.rootchecker.ConstantsUtilities.Constants
 import com.roottools.rootchecker.ConstantsUtilities.RootUtilities
