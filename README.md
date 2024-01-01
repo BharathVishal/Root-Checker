@@ -37,13 +37,13 @@ This application doesn't root any Android device. This app only displays all the
 &nbsp;
 
 ### SDK Info : 
-Min SDK : 23  | Target SDK : 34 | Gradle : 8.1.3 | Kotlin | Jetpack Compose
+Min SDK : 23  | Target SDK : 34 | Gradle : 8.2.0 | Kotlin | Jetpack Compose
 
 &nbsp;
 
 
 ### Android Studio Version : 
-Android Studio Giraffe | 2022.3.1 Patch 3
+Android Studio Hedgehog | 2023.1.1
 
 
 &nbsp;
@@ -58,5 +58,5 @@ Android is a trademark of Google LLC.
 &nbsp;
 &nbsp;
 
-© 2018-2023. Developed by Bharath Vishal G (https://github.com/BharathVishal). Logo designed by somratking420(https://github.com/somratking420). Thank you. :slightly_smiling_face:
+© 2018-2024. Developed by Bharath Vishal G (https://github.com/BharathVishal). Logo designed by somratking420(https://github.com/somratking420). Thank you. :slightly_smiling_face:
 
