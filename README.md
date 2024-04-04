@@ -37,13 +37,13 @@ This application doesn't root any Android device. This app only displays all the
 &nbsp;
 
 ### SDK Info : 
-Min SDK : 23  | Target SDK : 34 | Gradle : 8.2.0 | Kotlin | Jetpack Compose
+Min SDK : 23  | Target SDK : 34 | Gradle : 8.3.1 | Kotlin | Jetpack Compose
 
 &nbsp;
 
 
 ### Android Studio Version : 
-Android Studio Hedgehog | 2023.1.1
+Android Studio Iguana | 2023.2.1 Patch 1
 
 
 &nbsp;
