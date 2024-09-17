@@ -6,16 +6,16 @@ plugins {
 
 android {
     namespace = "com.roottools.rootchecker"
-    compileSdk = 34
+    compileSdk = 35
     defaultConfig {
         applicationId = "com.roottools.rootchecker"
         vectorDrawables {
             useSupportLibrary = true
         }
         minSdk = 23
-        targetSdk = 34
-        versionCode = 115
-        versionName = "5.0"
+        targetSdk = 35
+        versionCode = 118
+        versionName = "5.1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     buildFeatures {
@@ -49,7 +49,7 @@ android {
         jvmTarget = "17"
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.14"
+        kotlinCompilerExtensionVersion = "1.5.15"
     }
 
     packaging {

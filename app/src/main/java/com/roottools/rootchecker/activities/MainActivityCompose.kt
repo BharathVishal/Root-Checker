@@ -153,7 +153,8 @@ class MainActivityCompose : ComponentActivity(), CoroutineScope by MainScope() {
     fun TopAppBarMain() {
         TopAppBar(
             title = { Text("Root Checker  - Compose Activity") },
-            colors = TopAppBarDefaults.smallTopAppBarColors(
+            colors =
+            TopAppBarDefaults.mediumTopAppBarColors(
                 titleContentColor = MaterialTheme.colorScheme.onSurfaceVariant,
                 containerColor = MaterialTheme.colorScheme.surface
             )
