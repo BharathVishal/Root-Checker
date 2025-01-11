@@ -20,9 +20,11 @@ package com.roottools.rootchecker.activities
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -61,6 +63,15 @@ class MainActivityCompose : ComponentActivity(), CoroutineScope by MainScope() {
     private var busyBoxInstalledVal = mutableStateOf("No")
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
+                enableEdgeToEdge()
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
+
         super.onCreate(savedInstanceState)
 
         //Applies Material dynamic theming

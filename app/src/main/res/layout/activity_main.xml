@@ -23,6 +23,7 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
+        android:id="@+id/appbartoplayout"
         android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.MaterialToolbar
@@ -37,6 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:id="@+id/cardviewMain"
         android:orientation="vertical"
         card_view:cardCornerRadius="12dp"
         card_view:cardElevation="1dp"
