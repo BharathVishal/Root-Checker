@@ -37,7 +37,7 @@ This application doesn't root any Android device. This app only displays all the
 &nbsp;
 
 ### SDK Info : 
-Min SDK : 23  | Target SDK : 35 | Gradle : 8.9.0 | Kotlin | Jetpack Compose
+Min SDK : 23  | Target SDK : 36 | Gradle : 8.9.0 | Kotlin | Jetpack Compose
 
 &nbsp;
 
