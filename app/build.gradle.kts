@@ -14,8 +14,8 @@ android {
         }
         minSdk = 23
         targetSdk = 36
-        versionCode = 124
-        versionName = "5.3.1"
+        versionCode = 125
+        versionName = "5.3.2"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     buildFeatures {
